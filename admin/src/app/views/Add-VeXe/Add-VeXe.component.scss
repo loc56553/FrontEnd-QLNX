@@ -1,0 +1,20 @@
+.col-wrap {
+    display: table; 
+    width: 100%; 
+}
+
+.col {
+    display: table-cell;
+    padding: 1rem
+}
+.col:nth-child(even){
+    background-color:white;
+}
+.col:nth-child(odd){
+    background-color:white;
+}
+.btn{
+    padding: 10px 10px;
+    border: 1px solid #333;
+    display:inline-block;
+}

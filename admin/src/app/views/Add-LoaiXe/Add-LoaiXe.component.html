@@ -1,0 +1,17 @@
+<div class="">
+  <form cForm class="row g-3">
+    <c-col [md]="6">
+    <label cLabel for="inputtenLoaiXe">Tên Loại Xe</label>
+    <input [(ngModel)]="loaiXe.tenLoaiXe" name="tenLoaiXe" type="text" cFormControl id="inputtenLoaiXe" type="text"required="required" />
+    </c-col>
+    <c-col [md]="6">
+      <label cLabel for="inputsoGhe">Tổng Số Ghế</label>
+      <input  [(ngModel)]="loaiXe.soGhe" name="soGhe"cFormControl id="soGhe" type="text"required="required" />
+      </c-col>
+    <c-col [xs]="12">
+    </c-col>
+    <c-col [xs]="12">
+    <button (click)="addLX()" cButton type="submit">Save</button>
+    </c-col>
+    </form>
+</div>

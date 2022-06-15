@@ -1,0 +1,32 @@
+<div class="" *ngIf="!chuyenXeS">
+  <h1>Chưa Có Thông Tin Chuyến Xe Nào</h1>
+  <button (click)="FormAddCV()"cButton color="success">Add</button>
+  </div>
+  <div class="" *ngIf="chuyenXeS">
+    <table cTable>
+      <thead>
+      <tr>
+      <th scope="col">MSCX</th>
+      <th scope="col">Tên Tuyến Đường</th>
+      <th scope="col">Ngày Đi</th>
+      <th scope="col">Tên Loại Xe</th>
+      <th scope="col">Giờ Đi</th>
+      <th scope="col">Giá Vé</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of chuyenXeS ">
+      <td>{{item.mscx}}</td>
+      <td>{{item.tenTD}}</td>
+      <td>{{item.ngayDi}}</td>
+      <td>{{item.tenLX}}</td>
+      <td>{{item.gioDi}}</td>
+      <td>{{item.gia}} VNĐ</td>
+      <td>
+        <button (click)="getOneCV(item.mscx)" cButton color="warning">Edit</button>
+        <button (click)="Delete(item.mscx)" cButton color="danger">Delete</button>
+      </td> 
+      </tr>
+      </tbody>
+      <button (click)="FormAddCV()"cButton color="success">Add</button>
+      </table>
+  </div>

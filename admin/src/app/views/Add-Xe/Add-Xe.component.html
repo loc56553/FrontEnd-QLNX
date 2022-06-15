@@ -1,0 +1,19 @@
+<div class="">
+  <form cForm class="row g-3">
+    <c-col [md]="6"  *ngIf="bsXE==null">
+    <label cLabel for="inputbienSoXe">Biển Số Xe</label>
+    <input [(ngModel)]="xE.bienSoXe" name="bienSoXe" type="text" cFormControl id="inputbienSoXe" type="text" required="required" />
+    </c-col>
+    <c-col [md]="4">
+      <label cLabel for="inputchucVu">Loại Xe</label>
+      <select [(ngModel)]="xE.tenLoaiXe" name="tenLoaiXe" cSelect id="inputtenLoaiXe" required="required">
+      <option *ngFor="let item of listLoaiXe" [value]="item.tenLoaiXe">{{item.tenLoaiXe}}</option>
+      </select>
+      </c-col>
+    <c-col [xs]="12">
+    </c-col>
+    <c-col [xs]="12">
+    <button (click)="addXE()" cButton type="submit">Save</button>
+    </c-col>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="" *ngIf="!Xes">
+  <h1>Chưa Có Thông Tin Chức Vụ</h1>
+  </div>
+  <div class="" *ngIf="Xes">
+    <table cTable>
+      <thead>
+      <tr>
+      <th scope="col">Biển Số Xe</th>
+      <th scope="col">Tên Loại Xe</th>
+      <th scope="col">Trạng Thái</th>
+      <th scope="col">Số Chuyến Đi</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of Xes" [ngSwitch]="item.status">
+      <td>{{item.bienSoXe}}</td>
+      <td>{{item.tenLoaiXe}}</td>
+      <td *ngSwitchCase="0">Trong Bãi</td>
+      <td *ngSwitchCase="1">Xuất Bãi</td>
+      <td>{{item.soChuyenDi}}</td>
+      <td>
+        <button (click)="getOneXe(item.bienSoXe)" cButton color="warning">Edit</button>
+        <button (click)="Delete(item.bienSoXe)" cButton color="danger">Delete</button>
+      </td> 
+      </tr>
+      </tbody>
+      <button (click)="FormAddXe()"cButton color="success">Add</button>
+      </table>
+  </div>

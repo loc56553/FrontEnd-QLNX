@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20211102161825__DbV2.cs" />
+    <Compile Remove="Migrations\20211102161825__DbV2.Designer.cs" />
+    <Compile Remove="Migrations\20211102164211__DbV2.cs" />
+    <Compile Remove="Migrations\20211102164211__DbV2.Designer.cs" />
+    <Compile Remove="Migrations\20211102165701__DbV2.cs" />
+    <Compile Remove="Migrations\20211102165701__DbV2.Designer.cs" />
+    <Compile Remove="Migrations\20211104051023__DbV2.cs" />
+    <Compile Remove="Migrations\20211104051023__DbV2.Designer.cs" />
+    <Compile Remove="Migrations\20211104051805__QlyKhoXe.cs" />
+    <Compile Remove="Migrations\20211104051805__QlyKhoXe.Designer.cs" />
+    <Compile Remove="Migrations\20211104051944_QLyKhoXe.cs" />
+    <Compile Remove="Migrations\20211104051944_QLyKhoXe.Designer.cs" />
+    <Compile Remove="Migrations\20211104052149__DbV2.cs" />
+    <Compile Remove="Migrations\20211104052149__DbV2.Designer.cs" />
+    <Compile Remove="Migrations\20211105134904_UpdateModelXe.cs" />
+    <Compile Remove="Migrations\20211105134904_UpdateModelXe.Designer.cs" />
+    <Compile Remove="Migrations\20211111075009_UpXeVaGhe.cs" />
+    <Compile Remove="Migrations\20211111075009_UpXeVaGhe.Designer.cs" />
+    <Compile Remove="Migrations\20211111075254_UpdataXeVaGhe.cs" />
+    <Compile Remove="Migrations\20211111075254_UpdataXeVaGhe.Designer.cs" />
+    <Compile Remove="Migrations\20220517023752_EditPropertieseNgaySinhKH.cs" />
+    <Compile Remove="Migrations\20220517023752_EditPropertieseNgaySinhKH.Designer.cs" />
+    <Compile Remove="Migrations\20220606073409_DeleteGhe.cs" />
+    <Compile Remove="Migrations\20220606073409_DeleteGhe.Designer.cs" />
+    <Compile Remove="Migrations\20220606103830_EditTableGheXeColumMSGHE.cs" />
+    <Compile Remove="Migrations\20220606103830_EditTableGheXeColumMSGHE.Designer.cs" />
+    <Compile Remove="Migrations\20220606110231_NewGhe.cs" />
+    <Compile Remove="Migrations\20220606110231_NewGhe.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>C:\Users\ADMIN\Desktop\XuatBaoCaoWordBangMailMergeAspose\Dll\Aspose.Words.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+</Project>

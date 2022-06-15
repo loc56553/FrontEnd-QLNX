@@ -1,0 +1,25 @@
+<div class="">
+  <form cForm class="row g-3">
+    <c-col [xs]="10">
+    <label cLabel for="inputtenChucVu">Tên Chức Vụ</label>
+    <input [(ngModel)]="chucVu.tenChucVu" name="tenChucVu" type="text" cFormControl id="inputmsChucVu" type="text"required="required" />
+    </c-col>
+    <c-col [md]="6">
+      <label cLabel for="inputvietTatChucVu">Viết Tắt Chức Vụ</label>
+      <input  [(ngModel)]="chucVu.vietTatChucVu" name="vietTatChucVu"cFormControl id="vietTatChucVu" type="text"required="required" />
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="inputmucDoTruyCap">Chức Vụ</label>
+        <select [(ngModel)]="chucVu.mucDoTruyCap" name="mucDoTruyCap" cSelect id="inputchucVu"required="required">
+        <option value='1'>Cao</option>
+        <option value='2'>Trung Bình</option>
+        <option value='3'>Thấp</option>
+        </select>
+        </c-col>
+    <c-col [xs]="12">
+    </c-col>
+    <c-col [xs]="12">
+    <button (click)="addCV()" cButton type="submit">Save</button>
+    </c-col>
+    </form>
+</div>

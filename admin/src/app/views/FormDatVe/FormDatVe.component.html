@@ -1,0 +1,62 @@
+<div class="" *ngIf="Ghe.trangThai ===1">
+  <c-col [md]="12">
+    <label cLabel for="inputtenKH">Họ Và Tên Khách Hàng</label>
+    <input [(ngModel)]="vexeView.tenKH" name="tenKH" cFormControl id="inputtenKH" type="text"required="required" />
+  </c-col>
+  <c-col [xs]="6">
+      <label cLabel for="inputngaySinhKH">Ngày Sinh</label>
+      <input  [(ngModel)]="vexeView.ngaySinh" name="ngaySinhKH"cFormControl id="inputngaySinhKH" type="text" required="required"/>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="inputsoDienThoai">Số Điện Thoại</label>
+    <input [(ngModel)]="vexeView.sdt" name="SDT" cFormControl id="inputsoDienThoai" type="text" required="required"/>
+  </c-col>
+    <c-col [md]="6">
+      <label cLabel for="inputsoNgayDi">Ngày Đi</label>
+      <input [(ngModel)]="vexeView.ngayDi" name="SDT" cFormControl id="inputsoDienThoai" type="text" readonly="readonly"/>
+    </c-col>
+      <c-col [md]="4">
+        <label cLabel for="inputsoGhe">Số Ghế</label>
+        <input [(ngModel)]="vexeView.soGhe" name="soGhe" cFormControl id="inputsoDienThoai" type="text" readonly="readonly"/>
+      </c-col>
+      <c-col [md]="4">
+          <label cLabel for="inputgia">Giá</label>
+          <input [(ngModel)]="chuyenXe.gia" name="gia" cFormControl id="inputsoDienThoai" type="text" readonly="readonly"/>
+      </c-col>
+      <div class="mt-3 d-flex">
+          <c-col [md]="3">
+            <button class="btn btn-danger" (click)="DeleteVe()" cButton type="submit">Xóa</button>
+            </c-col>
+            </div>
+  </div>
+  <div class="" [hidden]="Ghe.trangThai ===1">
+<c-col [md]="12">
+  <label cLabel for="inputtenKH">Họ Và Tên Khách Hàng</label>
+  <input [(ngModel)]="veXe.tenKH" name="tenKH" cFormControl id="inputtenKH" type="text"required="required" />
+</c-col>
+<c-col [xs]="6">
+    <label cLabel for="inputngaySinhKH">Ngày Sinh</label>
+    <input  [(ngModel)]="veXe.ngaySinhKH" name="ngaySinhKH"cFormControl id="inputngaySinhKH" type="date" required="required"/>
+</c-col>
+<c-col [md]="6">
+  <label cLabel for="inputsoDienThoai">Số Điện Thoại</label>
+  <input [(ngModel)]="veXe.sdt" name="SDT" cFormControl id="inputsoDienThoai" type="text" required="required"/>
+</c-col>
+  <c-col [md]="6">
+    <label cLabel for="inputsoDienThoai">Ngày Đi</label>
+    <input [(ngModel)]="chuyenXe.ngayDi" name="SDT" cFormControl id="inputsoDienThoai" type="text" readonly="readonly"/>
+  </c-col>
+    <c-col [md]="4">
+      <label cLabel for="inputsoGhe">Số Ghế</label>
+      <input [(ngModel)]="Ghe.tenGhe" name="soGhe" cFormControl id="inputsoDienThoai" type="text" readonly="readonly"/>
+    </c-col>
+    <c-col [md]="4">
+        <label cLabel for="inputgia">Giá</label>
+        <input [(ngModel)]="chuyenXe.gia" name="gia" cFormControl id="inputsoDienThoai" type="text" readonly="readonly"/>
+    </c-col>
+    <div class="mt-3 d-flex">
+      <c-col [md]="3">
+        <button class="btn btn-success" (click)="addVe()" cButton type="submit">Lưu</button>
+        </c-col>
+    </div>
+  </div>

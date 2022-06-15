@@ -1,0 +1,17 @@
+<div class="">
+  <form cForm class="row g-3">
+    <c-col [md]="6">
+    <label cLabel for="inputdiemDi">Điểm Xuất Phát</label>
+    <input [(ngModel)]="tuyenDuong.diemDi" name="diemDi" type="text" cFormControl id="inputdiemDi" type="text"required="required" />
+    </c-col>
+    <c-col [md]="6">
+      <label cLabel for="inputsoGhe">Điểm Đến</label>
+      <input  [(ngModel)]="tuyenDuong.diemDen" name="soGhe"cFormControl id="soGhe" type="text"required="required" />
+      </c-col>
+    <c-col [xs]="12">
+    </c-col>
+    <c-col [xs]="12">
+    <button (click)="addTD()" cButton type="submit">Save</button>
+    </c-col>
+    </form>
+</div>

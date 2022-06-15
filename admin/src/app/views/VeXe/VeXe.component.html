@@ -1,0 +1,40 @@
+<label cLabel for="inputtenTD">Tên Tuyến Đường</label>
+<select [(ngModel)]="maTD" name="tenTD" cSelect id="inputtenTD"required="required">
+<option *ngFor="let item of tuyenDuongs" [value]="item.mstd">{{item.tenTD}}</option>
+</select>
+<c-col [md]="4">
+  <label cLabel for="inputtenLX">Loại Xe</label>
+  <select [(ngModel)]="tenLX" name="tenLX" cSelect id="inputtenLX"required="required">
+  <option *ngFor="let item of loaiXes" [value]="item.tenLoaiXe">{{item.tenLoaiXe}}</option>
+  </select>
+  </c-col>
+  <c-col [md]="6">
+    <label cLabel for="inputngayDi">Ngày Đi</label>
+    <input  [(ngModel)]="time" name="ngayDi"cFormControl id="ngayDi" type="date"required="required" />
+  </c-col>
+  <button (click)="getListChuyenXe()"cButton color="success">Tìm Kiếm Chuyến Xe</button>
+
+  <div class="" *ngIf="!chuyenXes">
+    <h3>Chưa Có Thông Tin Chuyến Xe Nào</h3>
+    </div>
+    <div class="" *ngIf="chuyenXes">
+      <table cTable>
+        <thead>
+        <tr>
+          <th scope="col">MSCX</th>
+        <th scope="col">Tên Tuyến Đường</th>
+        <th scope="col">Ngày Đi</th>
+        <th scope="col">Tên Loại Xe</th>
+        <th scope="col">Giờ Đi</th>
+        <th scope="col">Giá Vé</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of chuyenXes ">
+        <td>{{item.mscx}}</td>
+        <td>{{item.tenTD}}</td>
+        <td>{{item.ngayDi}}</td>
+        <td>{{item.tenLX}}</td>
+        <td>{{item.gioDi}}</td>
+        <td>{{item.gia}} VNĐ</td>
+        <td><button (click)="FormVe(item.mscx)" cButton color="success">Chọn</button></td>
+        <td>

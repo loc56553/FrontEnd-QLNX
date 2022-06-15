@@ -1,0 +1,26 @@
+<div class="" *ngIf="!loaiXes">
+  <h1>Chưa Có Thông Tin Chức Vụ</h1>
+  <button (click)="FormAddLX()"cButton color="success">Add</button>
+  </div>
+  <div class="" *ngIf="loaiXes">
+    <table cTable>
+      <thead>
+      <tr>
+      <th scope="col">MSLX</th>
+      <th scope="col">Tên Loại Xe</th>
+      <th scope="col">Số Ghế</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of loaiXes">
+      <td>{{item.msLoaiXe}}</td>
+      <td>{{item.tenLoaiXe}}</td>
+      <td>{{item.soGhe}}</td>
+      <td>
+        <button (click)="getOneLX(item.msLoaiXe)" cButton color="warning">Edit</button>
+        <button (click)="Delete(item.msLoaiXe)" cButton color="danger">Delete</button>
+      </td> 
+      </tr>
+      </tbody>
+      <button (click)="FormAddLX()"cButton color="success">Add</button>
+      </table>
+  </div>

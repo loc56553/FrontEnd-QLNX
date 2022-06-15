@@ -1,0 +1,33 @@
+<div class="">
+  <form cForm class="row g-3">
+    <c-col [md]="4">
+      <label cLabel for="inputtenTD">Tên Tuyến Đường</label>
+      <select [(ngModel)]="chuyenXe.tenTD" name="tenTD" cSelect id="inputtenTD"required="required">
+      <option *ngFor="let item of tuyenDuongs" [value]="item.tenTD">{{item.tenTD}}</option>
+      </select>
+      </c-col>
+      <c-col [md]="4">
+        <label cLabel for="inputtenLX">Loại Xe</label>
+        <select [(ngModel)]="chuyenXe.tenLX" name="tenLX" cSelect id="inputtenLX"required="required">
+        <option *ngFor="let item of loaiXes" [value]="item.tenLoaiXe">{{item.tenLoaiXe}}</option>
+        </select>
+        </c-col>
+        <c-col [md]="8">
+          <label cLabel for="inputgia">Giá Tiền</label>
+          <input  [(ngModel)]="chuyenXe.gia" name="gia"cFormControl id="gia" type="text"required="required" />
+          </c-col>
+          <c-col [md]="6">
+            <label cLabel for="inputngayDi">Ngày Đi</label>
+            <input  [(ngModel)]="chuyenXe.ngayDi" name="ngayDi"cFormControl id="ngayDi" type="date"required="required" />
+            </c-col>
+            <c-col [md]="4">
+              <label cLabel for="inputgioDi">Giờ Đi</label>
+              <input  [(ngModel)]="chuyenXe.gioDi" name="gioDi"cFormControl id="gioDi" type="time"required="required" />
+              </c-col>
+    <c-col [xs]="12">
+    </c-col>
+    <c-col [xs]="12">
+    <button (click)="addNV()" cButton type="submit">Save</button>
+    </c-col>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<div class="" *ngIf="!nhanviens">
+<h1>Chưa Có Thông Tin Nhân Viên</h1>
+<button (click)="FormAddNV()"cButton color="success">Add</button>
+</div>
+
+<div class="" *ngIf="nhanviens">
+  <table cTable>
+    <thead>
+    <tr>
+    <th scope="col">MSNV</th>
+    <th scope="col">Họ và Tên</th>
+    <th scope="col">Số Điện Thoại</th>
+    <th scope="col">Ngày Sinh</th>
+    <th scope="col">Chức Vụ</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of nhanviens">
+    <td>{{item.userName}}</td>
+    <td>{{item.hoTen}}</td>
+    <td>{{item.soDienThoai}}</td>
+    <td>{{item.ngaySinh}}</td>
+    <td>{{item.chucVu}}</td>
+    <td>
+      <button (click)="getOneNV(item.userName)" cButton color="warning">Edit</button>
+      <button (click)="Delete(item.userName)" cButton color="danger">Delete</button>
+    </td> 
+    </tr>
+    </tbody>
+    <button (click)="FormAddNV()"cButton color="success">Add</button>
+    </table>
+</div>

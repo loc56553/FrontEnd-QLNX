@@ -1,0 +1,19 @@
+<div class=" container d-flex justify-content-around">
+  <p>Tầng dưới</p>
+  <p>Tầng trên</p>
+</div>
+<div class="container-fluid d-flex">
+  <div class="col d-flex flex-column">
+      <p class="btn {{item.trangThai === 0 ? 'btn-success ':'btn-danger '}}" *ngFor="let item of listGheTrai ; let i = index;" (click)="getvalue(item,item.tenGhe,1)" [ngClass]="item.class" >{{item.tenGhe}}</p>
+  </div>
+  <div class="col d-flex flex-column">
+    <p class="btn {{item.trangThai === 0 ? 'btn-success':'btn-danger '}}" *ngFor="let item of listGhePhai ; let i = index;"  (click)="getvalue(item,item.tenGhe,0)" [ngClass]="item.class" >{{item.tenGhe}}</p>
+  </div>
+  <div class="col d-flex flex-column">
+    <p class="btn {{item.trangThai === 0 ? 'btn-success':'btn-danger '}}" *ngFor="let item of listGheTrenTrai ; let i = index;"  (click)="getvalue(item,item.tenGhe,2)" [ngClass]="item.class" >{{item.tenGhe}}</p>
+  </div>
+  <div class="col d-flex flex-column">
+    <p class="btn {{item.trangThai === 0 ? 'btn-success':'btn-danger'}}" *ngFor="let item of listGheTrenPhai ; let i = index;"  (click)="getvalue(item,item.tenGhe,3)" [ngClass]="item.class" >{{item.tenGhe}}</p>
+  </div>
+</div>
+<app-FormDatVe *ngIf="formVe" [msCX]="mscx" [Ghe]="Ghe"></app-FormDatVe>

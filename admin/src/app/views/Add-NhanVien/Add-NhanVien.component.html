@@ -1,0 +1,27 @@
+<div class="">
+  <form cForm class="row g-3">
+    <c-col [md]="6">
+    <label cLabel for="inputHovaTen">Họ Và Tên</label>
+    <input [(ngModel)]="nhanVien.hoTen" name="HoTen" cFormControl id="inputHovaTen" type="text"required="required" />
+    </c-col>
+    <c-col [xs]="12">
+      <label cLabel for="inputngaySinh">Ngày Sinh</label>
+      <input  [(ngModel)]="nhanVien.ngaySinh" name="ngaySinh"cFormControl id="inputngaySinh" type="date" required="required"/>
+      </c-col>
+    <c-col [md]="6">
+    <label cLabel for="inputsoDienThoai">Số Điện Thoại</label>
+    <input [(ngModel)]="nhanVien.soDienThoai" name="SDT" cFormControl id="inputsoDienThoai" type="text" required="required"/>
+    </c-col>
+    <c-col [md]="4">
+      <label cLabel for="inputchucVu">Chức Vụ</label>
+      <select [(ngModel)]="nhanVien.chucVu" name="chucVu" cSelect id="inputchucVu"required="required">
+      <option *ngFor="let item of chucVu" [value]="item.tenChucVu">{{item.tenChucVu}}</option>
+      </select>
+      </c-col>
+    <c-col [xs]="12">
+    </c-col>
+    <c-col [xs]="12">
+    <button (click)="addNV()" cButton type="submit">Save</button>
+    </c-col>
+    </form>
+</div>
